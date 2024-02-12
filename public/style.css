@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik");
+
+:root {
+    --bg-color: #1b1b1b;
+    --sb-color: #1f1f1f;
+    --fg-color: #ececec;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-left: 8px;
+    background-color: var(--sb-color);
+}
+
+.sidebar div {
+    display: block;
+}
+
+.post {
+    margin-left: 260px;
+}
+
+.footer {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 125px;
+}
+
+a {
+    color: #db4141;
+    cursor: pointer;
+    transition-duration: 250ms;
+    text-decoration: none;
+} a:hover {
+    color: #c03333;
+    transition-duration: 250ms;
+}
+
+.title-tag {
+    line-height: 1.4;
+    padding: 4px;
+    background-color: #db4141;
+    color: white;
+    margin-right: 16px;
+    margin-left: 4px;
+    margin-top: 14px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.title-tag h2 {
+    margin: 0%;
+}
+
+.title-tag p {
+    margin: 0%;
+}

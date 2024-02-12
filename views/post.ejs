@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Lolz's Blog | <#= title #></title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+
+    <body>
+        <div class="sidebar">
+            <div class="title-tag" onclick="location.href = '/posts/home'">
+                <h2>Lolz's Simple Blog</h2>
+                <p>Doing Dumb Stuff Everyday™</p>
+            </div>
+            <h2>Posts</h2>
+
+            <# posts.map((post) => { #>
+                [#] <a href="/posts/<#= post #>"><#= post #></a> <br />
+            <# }) #>
+        </div>
+
+        <div class="post">
+            <#- post #>
+
+            <p class="footer">
+                <#= description #>
+            </p>
+        </div>
+    </body>
+</html>
