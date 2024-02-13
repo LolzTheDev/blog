@@ -8,9 +8,7 @@
 
 body {
     font-family: "Space Mono", monospace;
-
     font-size: 125%;
-    color: var(--fg-color);
 }
 
 .theme-dark h1 h2 h3 h4 h5 {
