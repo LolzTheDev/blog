@@ -1,5 +1,5 @@
-[
-    {
+{
+    "dark": {
         "name": "dark",
 
         "bg": "#1b1b1b",
@@ -9,13 +9,11 @@
         "brand": "#db4141"
     },
 
-    {
-        "name": "light",
-
+    "light": {
         "bg": "#ebebeb",
         "sb": "#cfcfcf",
         "fg": "#1d1d1d",
 
         "brand": "#db4141"
     }
-]
+}
