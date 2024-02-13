@@ -11,15 +11,9 @@ body {
     font-size: 125%;
 }
 
-.theme-dark {
-    body {
-        background-color: #1b1b1b;
-        color: #ececec;
-    }
-
-    .sidebar {
-        background-color: var(--sb-color);
-    }
+.theme-dark body {
+    background-color: #1b1b1b;
+    color: #ececec;
 }
 
 .theme-dark .sidebar {
@@ -44,7 +38,7 @@ body {
 }
 
 .theme-light .sidebar {
-    background-color: #dfdfdf;
+    background-color: #cfcfcf;
 }
 
 .theme-light a {
