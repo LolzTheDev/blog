@@ -74,11 +74,12 @@
                 }
             }
 
+            console.log(`<%= theme %>`)
+
             if (getCookie("theme") == null) {
                 // set theme cookie :P
                 document.cookie = "theme=dark"
                 console.log("[Blog:Theme] Set theme to default")
-                console.log(`<%= theme %>`)
                 location.reload()
             } else {
                 let root = document.querySelector(":root")
