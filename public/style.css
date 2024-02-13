@@ -13,6 +13,9 @@ body {
 
 .theme-dark body {
     background-color: #1b1b1b;
+}
+
+.theme-dark h1 h2 h3 h4 h5 h6 p1 p2 p3 p4 p5 p6 {
     color: #ececec;
 }
 
@@ -28,7 +31,7 @@ body {
     color: #c03333;
 }
 
-.theme-dark, .title-tag {
+.theme-dark .title-tag {
     background-color: #db4141;
 } 
 
