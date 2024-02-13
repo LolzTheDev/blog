@@ -56,6 +56,8 @@
                 return decodeURI(dc.substring(begin + prefix.length, end));
             }
 
+            document.getElementById("theme").value = getCookie("theme")
+
             function setTheme() {
                 const input = document.getElementById("theme")
 
