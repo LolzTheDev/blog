@@ -1,11 +1,11 @@
 <html>
     <head>
-        <title>zirc's blog | <#= title #></title>
+        <title>zirc's blog | <%= title %></title>
         <link rel="stylesheet" href="/static/style.css">
         <link rel="shortcut icon" href="/static/Zr.png" type="image/x-icon">
     </head>
 
-    <body class="theme-<#= theme #>">
+    <body class="theme-<%= theme %>">
         <div class="sidebar">
             <div class="title-tag" onclick="location.href = '/posts/home'">
                 <h2>zirc's blog</h2>
@@ -13,11 +13,11 @@
             </div>
             <h2>Posts</h2>
 
-            <# posts.map((post) => { #>
-                <# if (post != "Home") { #>
-                    [#] <a href="/posts/<#= post #>"><#= post #></a> <br />
-                <# } #>
-            <# }) #>
+            <% posts.map((post) => { %>
+                <% if (post != "Home") { %>
+                    [%] <a href="/posts/<%= post %>"><%= post %></a> <br />
+                <% } %>
+            <% }) %>
 
             <div class="settings">
                 <label for="theme">Theme: </label>
@@ -32,10 +32,10 @@
         </div>
 
         <div class="post">
-            <#- post #>
+            <%- post %>
 
             <p class="footer">
-                <#= description #>
+                <%= description %>
             </p>
         </div>
 
@@ -83,9 +83,9 @@
                 let root = document.querySelector(":root")
 
                 if (getCookie("theme") == "light") {
-                    root.style.setProperty("--bg-color", "ebebeb")
-                    root.style.setProperty("--sb-color", "#cfcfcf")
-                    root.style.setProperty("--fg-color", "#1d1d1d")
+                    root.style.setProperty("--bg-color", "%ebebeb")
+                    root.style.setProperty("--sb-color", "%cfcfcf")
+                    root.style.setProperty("--fg-color", "%1d1d1d")
                 }
             }
         </script>

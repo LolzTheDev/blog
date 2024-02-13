@@ -8,12 +8,15 @@ const cookieParser = require("cookie-parser")
 
 const app = express()
 app.set("view engine", "ejs")
+
 app.use(
     morgan("[:status] :method \":url\" - :response-time ms")
 )
+
 app.use("/static", express.static("./public"))
 app.use(cookieParser())
-ejs.delimiter = "#"
+
+ejs.delimiter = "%"
 
 let posts = []
 posts = fs.readdirSync("./posts/")
