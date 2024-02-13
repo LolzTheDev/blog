@@ -9,14 +9,17 @@
 body {
     font-family: "Space Mono", monospace;
     font-size: 125%;
+
+    color: var(--fg-color);
+    background-color: var(--bg-color);
 }
 
 .theme-dark h1 h2 h3 h4 h5 {
-    color: var(--fg-color);
+    
 }
 
 .theme-dark body {
-    background-color: var(--bg-color);
+    
 }
 
 .theme-dark .sidebar {
