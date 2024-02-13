@@ -11,45 +11,45 @@ body {
     font-size: 125%;
 }
 
-.theme-dark > body {
+.theme-dark, body {
     background-color: #1b1b1b;
     color: #ececec;
 }
 
-.theme-dark > .sidebar {
+.theme-dark, .sidebar {
     background-color: var(--sb-color);
 }
 
-.theme-dark > a {
+.theme-dark, a {
     color: #db4141;
 }
 
-.theme-dark > a:hover {
+.theme-dark, a:hover {
     color: #c03333;
 }
 
-.theme-dark > .title-tag {
+.theme-dark, .title-tag {
     background-color: #db4141;
 } 
 
-.theme-light > body {
+.theme-light, body {
     background-color: #dbdbdb;
     color: #1d1d1d;
 }
 
-.theme-light > .sidebar {
+.theme-light, .sidebar {
     background-color: #cfcfcf;
 }
 
-.theme-light > a {
+.theme-light, a {
     color: #db4141;
 }
 
-.theme-light > a:hover {
+.theme-light, a:hover {
     color: #c03333;
 }
 
-.theme-light > .title-tag {
+.theme-light, .title-tag {
     background-color: #db4141;
 } 
 
