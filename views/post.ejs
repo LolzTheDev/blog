@@ -14,7 +14,9 @@
             <h2>Posts</h2>
 
             <# posts.map((post) => { #>
-                [#] <a href="/posts/<#= post #>"><#= post #></a> <br />
+                <# if (post != "Home") { #>
+                    [#] <a href="/posts/<#= post #>"><#= post #></a> <br />
+                <# } #>
             <# }) #>
 
             <div class="settings">
