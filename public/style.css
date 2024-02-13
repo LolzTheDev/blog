@@ -12,8 +12,8 @@ body {
 }
 
 .theme-dark body {
-    background-color: var(--bg-color);
-    color: var(--fg-color);
+    background-color: #1b1b1b;
+    color: #ececec;
 }
 
 .theme-dark .sidebar {
