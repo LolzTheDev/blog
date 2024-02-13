@@ -28,26 +28,6 @@ button {
     margin-top: 36px;
 }
 
-.theme-dark a {
-    color: var(--brand-color);
-}
-
-.theme-dark a:hover {
-    color: var(--brand-color);
-}
-
-.theme-dark .title-tag {
-    background-color: var(--brand-color);
-}
-
-.theme-light a {
-    color: var(--brand-color);
-}
-
-.theme-light .title-tag {
-    background-color: var(--brand-color);
-}
-
 .sidebar {
     height: 100%;
     width: 250px;
