@@ -24,6 +24,14 @@
             <p class="footer">
                 <#= description #>
             </p>
+            
+            <label for="theme">Theme: </label>
+            <select id="theme">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+
+            <button onclick="setTheme()">Submit</button>
         </div>
 
         <script>
@@ -49,7 +57,14 @@
             }
 
             function setTheme() {
+                const input = document.getElementById("theme")
 
+                if (getCookie("theme") == input.value) {
+                    location.reload()
+                } else {
+                    document.cookie = `theme=${input.value}`
+                    location.reload()
+                }
             }
 
             if (getCookie("theme") == null) {
