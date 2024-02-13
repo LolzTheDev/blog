@@ -10,7 +10,7 @@ body {
     font-family: "Rubik", sans-serif;
 
     background-color: var(--bg-color);
-    font-size: 125%
+    font-size: 125%;
     color: var(--fg-color);
 }
 
