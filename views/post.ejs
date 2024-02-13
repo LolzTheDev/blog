@@ -85,9 +85,9 @@
                 let root = document.querySelector(":root")
 
                 if (getCookie("theme")) {
-                    root.style.setProperty("--bg-color", "")
-                    root.style.setProperty("--sb-color", "")
-                    root.style.setProperty("--fg-color", "")
+                    root.style.setProperty("--bg-color", "<%= theme.bg %>")
+                    root.style.setProperty("--sb-color", "<%= theme.sb %>")
+                    root.style.setProperty("--fg-color", "<%= theme.fg %>")
                 }
             }
         </script>
