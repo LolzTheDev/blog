@@ -1,0 +1,21 @@
+[
+    {
+        "name": "dark",
+
+        "bg": "#1b1b1b",
+        "sb": "#1f1f1f",
+        "fg": "#ececec",
+
+        "brand": "#db4141"
+    },
+
+    {
+        "name": "light",
+
+        "bg": "#ebebeb",
+        "sb": "#cfcfcf",
+        "fg": "#1d1d1d",
+
+        "brand": "#db4141"
+    }
+]
