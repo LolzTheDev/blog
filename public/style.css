@@ -11,12 +11,9 @@ body {
     font-size: 125%;
 }
 
-.theme-dark h1 h2 h3 h4 h5 {
-    color: var(--fg-color);
-}
-
 .theme-dark body {
     background-color: var(--bg-color);
+    color: var(--fg-color);
 }
 
 .theme-dark .sidebar {
@@ -32,6 +29,27 @@ body {
 }
 
 .theme-dark .title-tag {
+    background-color: #db4141;
+} 
+
+.theme-light body {
+    background-color: #dbdbdb;
+    color: #1d1d1d;
+}
+
+.theme-light .sidebar {
+    background-color: #b2b2b2;
+}
+
+.theme-light a {
+    color: #db4141;
+}
+
+.theme-light a:hover {
+    color: #c03333;
+}
+
+.theme-light .title-tag {
     background-color: #db4141;
 } 
 
