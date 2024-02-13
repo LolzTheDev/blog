@@ -17,13 +17,16 @@
                 [#] <a href="/posts/<#= post #>"><#= post #></a> <br />
             <# }) #>
 
-            <label for="theme">Theme: </label>
-            <select id="theme">
-                <option value="dark">Dark</option>
-                <option value="light">Light</option>
-            </select>
+            <div class="settings">
+                <label for="theme">Theme: </label>
 
-            <button onclick="setTheme()">Submit</button>
+                <select id="theme">
+                    <option value="dark">Dark</option>
+                    <option value="light">Light</option>
+                </select>
+
+                <button onclick="setTheme()">Submit</button>
+            </div>
         </div>
 
         <div class="post">

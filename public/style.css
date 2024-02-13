@@ -23,6 +23,10 @@ button {
     font-family: "Space Mono", monospace;
 }
 
+.settings {
+    margin-top: 6px;
+}
+
 .theme-dark a {
     color: #db4141;
 }
