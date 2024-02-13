@@ -17,5 +17,15 @@
         "fg": "#1d1d1d",
 
         "brand": "#db4141"
+    },
+
+    {
+        "name": "ultradark",
+
+        "bg": "#0d0d0d",
+        "sb": "#0a0a0a",
+        "fg": "#ffffff",
+
+        "brand": "#154e7a"
     }
 ]
