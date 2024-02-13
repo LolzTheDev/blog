@@ -46,7 +46,7 @@ app.get("/posts/:post", async (req, res) => {
             post: marked.parse(post.content) , 
             description: post.data.description ,
             posts: posts ,
-            theme: themes.find(json => json.name === themeID)
+            theme: JSON.parse(themes).find(json => json.name === themeID)
         }
     )
 })
