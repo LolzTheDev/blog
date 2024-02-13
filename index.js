@@ -5,7 +5,6 @@ const fs = require("fs")
 const morgan = require("morgan")
 const matter = require("gray-matter")
 const cookieParser = require("cookie-parser")
-const _ = require("underscore")
 
 const app = express()
 app.set("view engine", "ejs")
@@ -34,8 +33,7 @@ app.get("/posts/:post", async (req, res) => {
     const themeID = req.cookies.theme || null
     const themes = await fs.promises.readFile(`./themes.json`, "utf-8")
 
-    console.log(_.where(themes, { name: themeID }))
-    console.log(themes)
+    console.log(themes, themeID, themes.find(json => json.name === themeID))
 
     const path = req.params.post
     const data = await fs.promises.readFile(`./posts/${path.toLowerCase()}.md`, "utf-8")
@@ -47,7 +45,7 @@ app.get("/posts/:post", async (req, res) => {
             post: marked.parse(post.content) , 
             description: post.data.description ,
             posts: posts ,
-            theme: _.where(themes, { name: themeID })
+            theme: themes.find(json => json.name === themeID)
         }
     )
 })
