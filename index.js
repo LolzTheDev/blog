@@ -33,9 +33,6 @@ app.get("/posts/:post", async (req, res) => {
     const themeID = req.cookies.theme
     const themes = await fs.promises.readFile(`./themes.json`, "utf-8")
 
-    console.log(themes, themeID, JSON.parse(themes)
-    .find(json => json.name === themeID))
-
     const path = req.params.post
     const data = await fs.promises.readFile(`./posts/${path.toLowerCase()}.md`, "utf-8")
     const post = matter.read(`./posts/${path.toLowerCase()}.md`)

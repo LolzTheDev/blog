@@ -4,6 +4,7 @@
     --bg-color: #1b1b1b;
     --sb-color: #1f1f1f;
     --fg-color: #ececec;
+    --brand-color: #db4141;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
 }
 
 button {
-    background-color: #db4141;
+    background-color: var(--brand-color);
     color: #fff;
 
     border: none;
@@ -28,27 +29,23 @@ button {
 }
 
 .theme-dark a {
-    color: #db4141;
+    color: var(--brand-color);
 }
 
 .theme-dark a:hover {
-    color: #c03333;
+    color: var(--brand-color);
 }
 
 .theme-dark .title-tag {
-    background-color: #db4141;
+    background-color: var(--brand-color);
 }
 
 .theme-light a {
-    color: #db4141;
-}
-
-.theme-light a:hover {
-    color: #c03333;
+    color: var(--brand-color);
 }
 
 .theme-light .title-tag {
-    background-color: #db4141;
+    background-color: var(--brand-color);
 }
 
 .sidebar {

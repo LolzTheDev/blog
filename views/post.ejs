@@ -15,7 +15,7 @@
 
             <% posts.map((post) => { %>
                 <% if (post != "Home") { %>
-                    [%] <a href="/posts/<%= post %>"><%= post %></a> <br />
+                    [#] <a href="/posts/<%= post %>"><%= post %></a> <br />
                 <% } %>
             <% }) %>
 
@@ -80,6 +80,7 @@
                 // set theme cookie :P
                 document.cookie = "theme=dark"
                 console.log("[Blog:Theme] Set theme to default")
+
                 location.reload()
             } else {
                 let root = document.querySelector(":root")
@@ -88,6 +89,7 @@
                     root.style.setProperty("--bg-color", "<%= theme.bg %>")
                     root.style.setProperty("--sb-color", "<%= theme.sb %>")
                     root.style.setProperty("--fg-color", "<%= theme.fg %>")
+                    root.style.setProperty("--brand-color", "<%= theme.brand %>")
                 }
             }
         </script>
