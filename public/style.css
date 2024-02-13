@@ -14,6 +14,30 @@ body {
     color: var(--fg-color);
 }
 
+.theme-dark h1 h2 h3 h4 h5 {
+    color: var(--fg-color);
+}
+
+.theme-dark body {
+    background-color: var(--bg-color);
+}
+
+.theme-dark .sidebar {
+    background-color: var(--sb-color);
+}
+
+.theme-dark a {
+    color: #db4141;
+}
+
+.theme-dark a:hover {
+    color: #c03333;
+}
+
+.theme-dark .title-tag {
+    background-color: #db4141;
+} 
+
 .sidebar {
     height: 100%;
     width: 250px;
@@ -21,7 +45,6 @@ body {
     left: 0;
     top: 0;
     padding-left: 8px;
-    background-color: var(--sb-color);
 }
 
 .sidebar div {
@@ -39,19 +62,16 @@ body {
 }
 
 a {
-    color: #db4141;
     cursor: pointer;
     transition-duration: 250ms;
     text-decoration: none;
 } a:hover {
-    color: #c03333;
     transition-duration: 250ms;
 }
 
 .title-tag {
     line-height: 1.4;
     padding: 4px;
-    background-color: #db4141;
     color: white;
     margin-right: 16px;
     margin-left: 4px;

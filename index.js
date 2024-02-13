@@ -4,6 +4,7 @@ const ejs = require("ejs")
 const fs = require("fs")
 const morgan = require("morgan")
 const matter = require("gray-matter")
+const cookieParser = require("cookie-parser")
 
 const app = express()
 app.set("view engine", "ejs")
@@ -11,6 +12,7 @@ app.use(
     morgan("[:status] :method \":url\" - :response-time ms")
 )
 app.use("/static", express.static("./public"))
+app.use(cookieParser())
 ejs.delimiter = "#"
 
 let posts = []
@@ -25,17 +27,21 @@ app.get("/", async (req, res) => {
 })
 
 app.get("/posts/:post", async (req, res) => {
+    const theme = req.cookies.theme || null
+
     const path = req.params.post
     const data = await fs.promises.readFile(`./posts/${path.toLowerCase()}.md`, "utf-8")
     const post = matter.read(`./posts/${path.toLowerCase()}.md`)
 
     res.render(
-        "post.ejs", { 
+        "post.ejs", {
             title: post.data.title , 
             post: marked.parse(post.content) , 
             description: post.data.description ,
-            posts: posts
-    })
+            posts: posts ,
+            theme: theme
+        }
+    )
 })
 
 app.get("/api", (req, res) => {
