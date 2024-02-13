@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik");
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap')
 
 :root {
     --bg-color: #1b1b1b;
@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: "Rubik", sans-serif;
+    font-family: "Space Mono", monospace;
 
     background-color: var(--bg-color);
     font-size: 125%;
