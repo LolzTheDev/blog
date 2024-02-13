@@ -73,6 +73,14 @@
                 document.cookie = "theme=dark"
                 console.log("[Blog:Theme] Set theme to default")
                 location.reload()
+            } else {
+                let root = document.querySelector(":root")
+
+                if (getCookie("theme") == "light") {
+                    root.style.setProperty("--bg-color", "#dfdfdf")
+                    root.style.setProperty("--sb-color", "#cfcfcf")
+                    root.style.setProperty("--fg-color", "#d1d1d1")
+                }
             }
         </script>
     </body>
