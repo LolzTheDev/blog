@@ -47,7 +47,7 @@ app.get("/posts/:post", async (req, res) => {
             post: marked.parse(post.content) , 
             description: post.data.description ,
             posts: posts ,
-            theme: _.where(themes, { name: themeID })[0]
+            theme: _.where(themes, { name: themeID })
         }
     )
 })
