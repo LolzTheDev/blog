@@ -1,6 +1,7 @@
 ---
 title: Buying a domain...
 description: For only $1.52!?
+date: 02-12-24
 ---
 
 # Buying a domain...

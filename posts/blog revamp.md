@@ -1,6 +1,7 @@
 ---
 title: Blog revamp!
 description: Looking somewhat nicer now?
+date: 02-12-24
 ---
 
 # Blog Revamp
