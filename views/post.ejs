@@ -72,7 +72,7 @@
             function setTheme() {
                 const input = document.getElementById("theme")
 
-                if (getCookie("theme") != input.value) {
+                if (getCookie("theme")) {
                     document.cookie = `theme=${input.value}`
                     
                     if (getCookie("theme")) {
