@@ -72,15 +72,11 @@
             function setTheme() {
                 const input = document.getElementById("theme")
 
-                if (getCookie("theme")) {
+                if (getCookie("theme") == input.value) {
+                    location.reload()
+                } else {
                     document.cookie = `theme=${input.value}`
-                    
-                    if (getCookie("theme")) {
-                        root.style.setProperty("--bg-color", "<%= theme.bg %>")
-                        root.style.setProperty("--sb-color", "<%= theme.sb %>")
-                        root.style.setProperty("--fg-color", "<%= theme.fg %>")
-                        root.style.setProperty("--brand-color", "<%= theme.brand %>")
-                    }
+                    location.reload()
                 }
             }
 
@@ -92,9 +88,16 @@
                 console.log("[Blog:Theme] Set theme to default")
 
                 location.reload()
-            }
+            } else {
+                let root = document.querySelector(":root")
 
-            setTheme()
+                if (getCookie("theme")) {
+                    root.style.setProperty("--bg-color", "<%= theme.bg %>")
+                    root.style.setProperty("--sb-color", "<%= theme.sb %>")
+                    root.style.setProperty("--fg-color", "<%= theme.fg %>")
+                    root.style.setProperty("--brand-color", "<%= theme.brand %>")
+                }
+            }
         </script>
     </body>
 </html>
