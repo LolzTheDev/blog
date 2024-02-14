@@ -89,13 +89,20 @@
 
                 location.reload()
             } else {
-                let root = document.querySelector(":root")
+                try {
+                    let root = document.querySelector(":root")
 
-                if (getCookie("theme")) {
-                    root.style.setProperty("--bg-color", "<%= theme.bg %>")
-                    root.style.setProperty("--sb-color", "<%= theme.sb %>")
-                    root.style.setProperty("--fg-color", "<%= theme.fg %>")
-                    root.style.setProperty("--brand-color", "<%= theme.brand %>")
+                    if (getCookie("theme")) {
+                        root.style.setProperty("--bg-color", "<%= theme.bg %>")
+                        root.style.setProperty("--sb-color", "<%= theme.sb %>")
+                        root.style.setProperty("--fg-color", "<%= theme.fg %>")
+                        root.style.setProperty("--brand-color", "<%= theme.brand %>")
+                    }
+                } catch(err) {
+                    document.cookie = "theme=dark"
+                    console.log("[Blog:Theme] Set theme to default")
+
+                    location.reload()
                 }
             }
         </script>
