@@ -63,13 +63,15 @@ app.get("/api", (req, res) => {
 
 app.get("/api/posts/:post", async (req, res) => {
     const post = req.params.post
-    const postFile = fs.readFileSync(`./posts/${post}`)
+    const postFile = await fs.promises.readFile(`./posts/${post}`)
+
+    const sluggedPost = matter.read(`./posts/${(req.params.post).toLowerCase()}.md`)
 
     res.json({
-        content: "Testing content",
+        content: postFile,
         meta: {
-            title: "Title",
-            description: "Description!",
+            title: sluggedPost.data.title,
+            description: sluggedPost.data.description,
             created: null
         }
     })
