@@ -30,7 +30,13 @@ app.get("/", async (req, res) => {
 })
 
 app.get("/posts/:post", async (req, res) => {
+    if (!req.cookies.theme) {
+        res.cookie("theme", "dark")
+        res.redirect("/")
+    }
+
     const themeID = req.cookies.theme || null
+
     const themes = await fs.promises.readFile(`./themes.json`, "utf-8")
 
     const path = req.params.post
