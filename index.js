@@ -68,7 +68,7 @@ app.get("/api/posts/:post", async (req, res) => {
     const sluggedPost = matter.read(`./posts/${(req.params.post).toLowerCase()}.md`)
 
     res.json({
-        content: postFile,
+        content: sluggedPost.content,
         meta: {
             title: sluggedPost.data.title,
             description: sluggedPost.data.description,
