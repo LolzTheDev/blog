@@ -63,7 +63,7 @@ app.get("/api", (req, res) => {
 
 app.get("/api/posts/:post", async (req, res) => {
     const post = req.params.post
-    const postFile = await fs.promises.readFile(`./posts/${post}`)
+    const postFile = await fs.promises.readFile(`./posts/${post}.md`)
 
     const sluggedPost = matter.read(`./posts/${(req.params.post).toLowerCase()}.md`)
 
