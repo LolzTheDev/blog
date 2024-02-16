@@ -96,6 +96,8 @@
                         root.style.setProperty("--fg-color", "<%= theme.fg %>")
                         root.style.setProperty("--brand-color", "<%= theme.brand %>")
                     }
+
+                    document.getElementById("theme").value = "<%= theme.name %>"
                 } catch(err) {
                     document.cookie = "theme=dark"
                     console.log("[Blog:Theme] Set theme to default")
