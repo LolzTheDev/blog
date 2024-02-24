@@ -1,5 +1,7 @@
 # blog.zirc.lol
 
-My personal blog
-
-If you want to use this, feel free to fork it
+<div align="center">
+  <a href="https://blog.zirc.lol">View site</a>
+  <br /> <br />
+  <img src="https://uptime.betterstack.com/status-badges/v1/monitor/11tce.svg" width="148px" />
+</div>
